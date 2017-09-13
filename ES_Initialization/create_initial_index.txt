@@ -1,0 +1,27 @@
+curl -XPUT search-twitttrends-kojvsfuimmqmy6aqimmrz3smbi.us-east-1.es.amazonaws.com/twitttrends -d '
+{
+    "mappings": {
+        "tweet": {
+            "properties": {
+                "keyword": {
+                    "type": "string"
+                },
+                "author": {
+                    "type": "string"
+                },
+                "text": {
+                    "type": "string"
+                },
+                "timestamp": {
+                    "type": "date"
+                },
+                "coordinates": {
+                    "type": "geo_point"
+                },
+                "sentiment": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}'
